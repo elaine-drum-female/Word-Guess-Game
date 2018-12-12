@@ -1,9 +1,9 @@
-#songList {
-    background: red;
+/* #songlist {
     height: 40px;
-    /* width: 100px; */
-    display: block;
-}
+    width: 35px;
+    border-bottom: 1px solid #000;
+    top: 104px;
+} */
 
 img {
     width:100%;

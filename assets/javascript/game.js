@@ -1,23 +1,24 @@
+//get elements
+
 var songListElement = document.getElementById("songlist");
-var letter = document.getElementsByClassName('letter').value;
-var songTitle = ["you belong with me", /* "red", "endgame", "lovestory", "never again", "papercut" */];
-var game = document.getElementById("game");
-var container = document.getElementById("container");
+var songTitle = ["you belong with me", "red", "endgame", "lovestory", "never again", "papercut"];
+var randomSong;
+var game;
+var container;
 
 var chosenLetter = [];
-var results = [];
-var winsElement = document.getElementById('wins');
-var losesElement = document.getElementById('losses');
+// var winsElement = document.getElementById('wins');
+// var losesElement = document.getElementById('losses');
 
 var wins = 0;
 var losses = 0;
+var guessesLeft = 10;
+var count = 0;
 
 var incorrectLetters = [];
-var guessesLeft = 10;
-var randomSong;
+var correctLetters = [];
 var underScore = [];
 
-var winCounter = 0;
 
 // function Artist (name, songs) {
 //     this.name = name;
@@ -37,28 +38,28 @@ function startGame() {
     // image.src = movieimages[imageRandom];
 
     randomSong = songTitle[Math.floor(Math.random() * songTitle.length)];
+    songTitle.trim;
     console.log('Random Song chosen = ' + randomSong);
     for (var i = 0; i < randomSong.length; i++) {
-        document.getElementById('songlist').innerHTML = underScore.join('');
+        document.getElementById('songlist').innerHTML = underScore.join(' ');
         underScore.push(' ___ ');
-  
-        //console.log(underScore); 
     }
-    console.log(underScore.length);
+
 
     document.onkeyup = function (e) {
         chosenLetter = event.key;
         if (randomSong.indexOf(chosenLetter) > -1) {
             for (var i = 0; i < randomSong.length; i++) {
                 if (randomSong[i] === chosenLetter) {
-                    //   underScore[i].replace('i', 'chosenLetter');
-
                     underScore[i] = chosenLetter;
-
-                    songListElement.textContent = underScore.join('');
-                    console.log(underScore);
+                    songListElement.textContent = underScore.join(' ');
                 }
             }
+
+            
+
+
+
         } else {
             LoseGame();
         }
@@ -69,15 +70,16 @@ function startGame() {
             console.log(incorrectLetters)
             document.getElementById('choseLetter').innerHTML = incorrectLetters;
             guessesLeft--;
-            document.getElementById('losses').textContent = guessesLeft;
+            document.getElementById('guesses-left').textContent = guessesLeft;
             console.log("You have this many guesses left: " + guessesLeft);
-            if (guessesLeft === 0) {
-                alert("Sorry. You lose");
+            if (guessesLeft < 0) {
+               alert("You lose");
+               return randomSong;
             }
 
         }
 
-        winsElement.textContent = wins;
+        
         // losesElement.textContent = losses;
 
     }
