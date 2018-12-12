@@ -1,7 +1,6 @@
-
-var songList = document.getElementById("songlist");
+var songListElement = document.getElementById("songlist");
 var letter = document.getElementsByClassName('letter').value;
-var songTitle = ["you belong with me", "red", "endgame", "lovestory", "never again", "papercut"];
+var songTitle = ["you belong with me", /* "red", "endgame", "lovestory", "never again", "papercut" */];
 var game = document.getElementById("game");
 var container = document.getElementById("container");
 
@@ -17,6 +16,7 @@ var incorrectLetters = [];
 var guessesLeft = 10;
 var randomSong;
 var underScore = [];
+
 var winCounter = 0;
 
 // function Artist (name, songs) {
@@ -41,34 +41,35 @@ function startGame() {
     for (var i = 0; i < randomSong.length; i++) {
         document.getElementById('songlist').innerHTML = underScore.join('');
         underScore.push(' ___ ');
+  
         //console.log(underScore); 
     }
-
+    console.log(underScore.length);
 
     document.onkeyup = function (e) {
         chosenLetter = event.key;
-        if (randomSong.indexOf(chosenLetter) > - 1) {
+        if (randomSong.indexOf(chosenLetter) > -1) {
             for (var i = 0; i < randomSong.length; i++) {
                 if (randomSong[i] === chosenLetter) {
                     //   underScore[i].replace('i', 'chosenLetter');
 
                     underScore[i] = chosenLetter;
 
-                    //document.getElementById(songlist).innerHTML = results.join('');
+                    songListElement.textContent = underScore.join('');
                     console.log(underScore);
                 }
             }
-        }
-
-        else {
+        } else {
             LoseGame();
         }
 
 
         function LoseGame() {
             incorrectLetters.push(chosenLetter);
-            var selected = document.getElementById('choseLetter').innerHTML = incorrectLetters;
+            console.log(incorrectLetters)
+            document.getElementById('choseLetter').innerHTML = incorrectLetters;
             guessesLeft--;
+            document.getElementById('losses').textContent = guessesLeft;
             console.log("You have this many guesses left: " + guessesLeft);
             if (guessesLeft === 0) {
                 alert("Sorry. You lose");
@@ -77,12 +78,11 @@ function startGame() {
         }
 
         winsElement.textContent = wins;
-        losesElement.textContent = losses;
+        // losesElement.textContent = losses;
 
     }
 
 }
-
 startGame();
 
 /*
