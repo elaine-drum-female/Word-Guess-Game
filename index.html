@@ -13,19 +13,22 @@
 
 <body>
     <div id="wrapper">
-            <h1>HANGMAN POP ARTIST STYLE</h1>
-    </div>
-    <h1>Name the Title of the song that goes with this Artist</h1>
-    <p>Press any key to get started</p>
-    <!-- <div id="container">
-        <img id="imgSelect" src="images/me-up-close.jpg"/>
-    </div> -->
-    <div id="game">
-        <span id="songlist"></span>
-        <h3>Letters Guessed: <span id="choseLetter"></span></h3>
-        <h3>Wins: <span id="wins">0</span></h3>
-        <h3>Losses: <span id="losses">0</span></h3>
-        <h3>Number of guesses remaining: <span id="guesses-left">10</span></h3>
+        <h1>HANGMAN POP ARTIST STYLE</h1>
+        <div class="main-content">
+            <div id="img-container">
+                <img id="imgSelect" src="images/demi-lovato.jpg" />
+            </div>
+            <div id="game">
+                <p>Press any key to get started</p>
+                <span id="wordsArr"></span>
+                <div class="game-text">
+                    <h3>Letters Guessed: <span id="guessedLetter"></span></h3>
+                    <h3>Wins: <span id="wins">0</span></h3>
+                    <h3>Losses: <span id="losses">0</span></h3>
+                    <h3>Number of guesses remaining: <span id="guessesRemaining">10</span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="assets/javascript/game.js"></script>
