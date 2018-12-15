@@ -1,33 +1,31 @@
-//get elements
-
-var songListElement = document.getElementById("songlist");
-var songTitle = ["you belong with me", "red", "endgame", "lovestory", "never again", "papercut"];
-var randomSong;
-var game;
-var container;
-
-var chosenLetter = [];
-// var winsElement = document.getElementById('wins');
-// var losesElement = document.getElementById('losses');
-
+var guessesRemainingElement = document.getElementById('guessesRemaining');
+var losesElement = document.getElementById('losses');
+var winsElement = document.getElementById('wins');
+var guessLettersElement = document.getElementById('guessedLetter');
+//var letterUsed = document.getElementById('usedLetter');
 var wins = 0;
 var losses = 0;
-var guessesLeft = 10;
-var count = 0;
+var guessesRemaining = 10;
 
-var incorrectLetters = [];
-var correctLetters = [];
+var wrongLetter = [];
+
+var rightLetter = [];
+
+var removeDuplicates = [];
+
+var guessLetters = [];
+
+var usedAlready = [];
+
 var underScore = [];
 
 
-// function Artist (name, songs) {
-//     this.name = name;
-//     this.songs = songs;
-// };
 
-// var swifty = new Artist ("Taylor Swift", ["You Belong With Me","Red"]);
-// var swiftyDetails = swifty.name + "these are her songs: " + songs;
-// songList.textContent = swiftyDetails;
+var wordBox = document.getElementById('wordsArr');
+var wordsTitle = ["red", "thank u next", "sorry", "wreckingball", "confident"];
+
+
+var computerSelectsRandomElement;
 
 
 function startGame() {
