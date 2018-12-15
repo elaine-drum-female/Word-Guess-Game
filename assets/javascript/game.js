@@ -32,7 +32,7 @@ var computerSelectsRandomElement;
 
 function startGame() {
 
- 
+
 
     computerSelectsRandomElement = wordsTitle[Math.floor(Math.random() * wordsTitle.length)];
 
@@ -40,10 +40,11 @@ function startGame() {
 
     var songTitle = computerSelectsRandomElement.split('');
     console.log(songTitle);
-    
-    for (var i = 0; i < randomSong.length; i++) {
-        document.getElementById('songlist').innerHTML = underScore.join(' ');
-        underScore.push(' ___ ');
+
+    // Create a for loop that finds the length of the wordsArr and then computer selects at random from that array
+    for (var i = 0; i < computerSelectsRandomElement.length; i++) {
+        wordsArr.innerHTML = underScore.join('');
+        underScore.push(' __ ');
     }
 
 
@@ -57,7 +58,7 @@ function startGame() {
                 }
             }
 
-            
+
 
 
 
@@ -74,13 +75,13 @@ function startGame() {
             document.getElementById('guesses-left').textContent = guessesLeft;
             console.log("You have this many guesses left: " + guessesLeft);
             if (guessesLeft < 0) {
-               alert("You lose");
-               return randomSong;
+                alert("You lose");
+                return randomSong;
             }
 
         }
 
-        
+
         // losesElement.textContent = losses;
 
     }
