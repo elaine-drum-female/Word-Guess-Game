@@ -27,6 +27,8 @@ var wordsTitle = ["red", "thank u next", "sorry", "wreckingball", "confident"];
 
 var computerSelectsRandomElement;
 
+// Start the game
+
 
 function startGame() {
 
