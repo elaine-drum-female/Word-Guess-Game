@@ -35,8 +35,12 @@ function startGame() {
  
 
     computerSelectsRandomElement = wordsTitle[Math.floor(Math.random() * wordsTitle.length)];
+
+    //console.log('Random Song chosen = ' + randomSong);
+
+    var songTitle = computerSelectsRandomElement.split('');
+    console.log(songTitle);
     
-    console.log('Random Song chosen = ' + randomSong);
     for (var i = 0; i < randomSong.length; i++) {
         document.getElementById('songlist').innerHTML = underScore.join(' ');
         underScore.push(' ___ ');
