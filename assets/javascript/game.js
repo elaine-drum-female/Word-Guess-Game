@@ -34,8 +34,8 @@ function startGame() {
 
  
 
-    randomSong = songTitle[Math.floor(Math.random() * songTitle.length)];
-    songTitle.trim;
+    computerSelectsRandomElement = wordsTitle[Math.floor(Math.random() * wordsTitle.length)];
+    
     console.log('Random Song chosen = ' + randomSong);
     for (var i = 0; i < randomSong.length; i++) {
         document.getElementById('songlist').innerHTML = underScore.join(' ');
