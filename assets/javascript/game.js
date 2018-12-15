@@ -116,9 +116,8 @@ function startGame() {
 
 }
 
-}
-startGame();
-
+ // ELSE for capturing ALL LETTERS and storing them in the GUESSLETTERS array
+ 
 /*
 
 having trouble setting the letter in the underscore once the user has chosen the right letter
