@@ -125,3 +125,8 @@ function startGame() {
             losesElement.textContent = losses++;
             guessesRemainingElement.textContent = guessesRemaining--;
             winsElement.textContent = wins++;
+
+            // create a for loop where js checks to see that every letter in the wordBox is filled,
+            // if true tell the user they WON and that would reset the game plus it would change the image
+
+            
