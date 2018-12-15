@@ -77,9 +77,14 @@ function startGame() {
         randomImage();
 
 
-    } else {
-        LoseGame();
-    }
+    // start the RIGHT LETTER FOR LOOP
+    for (var w = 0; w < songTitle.length; w++) {
+
+        if (lettersGuessedElement == songTitle[w]) {
+            correct = true;
+            rightLetter.push(lettersGuessedElement);
+            wins++;
+        }
 
 
     function LoseGame() {
