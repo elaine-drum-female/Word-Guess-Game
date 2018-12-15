@@ -47,6 +47,11 @@ function startGame() {
         underScore.push(' __ ');
     }
 
+     // Capture the keys fired by the user
+     document.onkeyup = function (event) {
+
+        lettersGuessedElement = event.key;
+        //console.log(lettersGuessedElement);
 
     document.onkeyup = function (e) {
         chosenLetter = event.key;
