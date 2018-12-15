@@ -32,10 +32,7 @@ var computerSelectsRandomElement;
 
 function startGame() {
 
-    // var image = document.getElementById('imgSelect');
-    // var movieimages = ["images/me-up-close.jpg", "images/new-drumset.jpg"];
-    // var imageRandom = Math.floor(Math.random () * movieimages.length) + 0;
-    // image.src = movieimages[imageRandom];
+ 
 
     randomSong = songTitle[Math.floor(Math.random() * songTitle.length)];
     songTitle.trim;
