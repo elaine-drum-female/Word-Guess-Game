@@ -47,49 +47,48 @@ function startGame() {
         underScore.push(' __ ');
     }
 
-     // Capture the keys fired by the user
-     document.onkeyup = function (event) {
+    // Capture the keys fired by the user
+    document.onkeyup = function (event) {
 
         lettersGuessedElement = event.key;
         //console.log(lettersGuessedElement);
 
-    document.onkeyup = function (e) {
-        chosenLetter = event.key;
-        if (randomSong.indexOf(chosenLetter) > -1) {
-            for (var i = 0; i < randomSong.length; i++) {
-                if (randomSong[i] === chosenLetter) {
-                    underScore[i] = chosenLetter;
-                    songListElement.textContent = underScore.join(' ');
+
+        //check to see if value from the users selection is of the first occurence if it is NOT more than - 1 than have the computer's index equal the same of the lettersguessed
+        if (computerSelectsRandomElement.indexOf(lettersGuessedElement) > -1) {
+            for (var i = 0; i < computerSelectsRandomElement.length; i++) {
+                if (computerSelectsRandomElement[i] === lettersGuessedElement) {
+                    underScore[i] = lettersGuessedElement;
+                    wordBox.textContent = underScore.join(' ');
                 }
             }
-
-
-
-
-
-        } else {
-            LoseGame();
         }
 
 
-        function LoseGame() {
-            incorrectLetters.push(chosenLetter);
-            console.log(incorrectLetters)
-            document.getElementById('choseLetter').innerHTML = incorrectLetters;
-            guessesLeft--;
-            document.getElementById('guesses-left').textContent = guessesLeft;
-            console.log("You have this many guesses left: " + guessesLeft);
-            if (guessesLeft < 0) {
-                alert("You lose");
-                return randomSong;
-            }
 
+    } else {
+        LoseGame();
+    }
+
+
+    function LoseGame() {
+        incorrectLetters.push(chosenLetter);
+        console.log(incorrectLetters)
+        document.getElementById('choseLetter').innerHTML = incorrectLetters;
+        guessesLeft--;
+        document.getElementById('guesses-left').textContent = guessesLeft;
+        console.log("You have this many guesses left: " + guessesLeft);
+        if (guessesLeft < 0) {
+            alert("You lose");
+            return randomSong;
         }
-
-
-        // losesElement.textContent = losses;
 
     }
+
+
+    // losesElement.textContent = losses;
+
+}
 
 }
 startGame();
