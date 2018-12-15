@@ -65,6 +65,17 @@ function startGame() {
         }
 
 
+        function randomImage() {
+            var randomImage = document.getElementById('imgSelect');
+            if (computerSelectsRandomElement == "demi") {
+                randomImage.src = "demi-lovato.jpg";
+            } else if (computerSelectsRandomElement == "band-pose") {
+                randomImage.src = "band-pose2";
+            }
+        }
+
+        randomImage();
+
 
     } else {
         LoseGame();
