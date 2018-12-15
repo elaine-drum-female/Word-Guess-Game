@@ -92,18 +92,23 @@ function startGame() {
     var found = false;
 
 
-    function LoseGame() {
-        incorrectLetters.push(chosenLetter);
-        console.log(incorrectLetters)
-        document.getElementById('choseLetter').innerHTML = incorrectLetters;
-        guessesLeft--;
-        document.getElementById('guesses-left').textContent = guessesLeft;
-        console.log("You have this many guesses left: " + guessesLeft);
-        if (guessesLeft < 0) {
-            alert("You lose");
-            return randomSong;
+    for (r = 0; r < guessLetters.length; r++) {
+        //console.log(guessLetters[i]);
+        for (c = 0; c < removeDuplicates.length; c++) {
+            if (guessLetters[c] == removeDuplicates[c]) {
+                found = true;
+
+            }
+
+            usedAlready.push(removeDuplicates[c]);
         }
 
+        count++;
+        if (count == 1 && found == false) {
+            removeDuplicates.push(guessLetters[c]);
+        }
+        count = 0;
+        found = false;
     }
 
 
