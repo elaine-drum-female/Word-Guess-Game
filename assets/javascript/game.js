@@ -117,15 +117,9 @@ function startGame() {
 }
 
  // ELSE for capturing ALL LETTERS and storing them in the GUESSLETTERS array
- 
-/*
 
-having trouble setting the letter in the underscore once the user has chosen the right letter
 
-the wins count is counting every single letter that is chosen and i want it to only win when the user has guessed it correctly and to automatically change to a new word
+ guessLetters.push(lettersGuessedElement);
+ guessLettersElement.textContent = guessLetters.join(' , ');
 
-same for losses, i want the user to lose when they are all out guesses
 
-i want the countdown of the guesses remaining to drop every time a letter is guessed wrong
-
-*/
