@@ -134,3 +134,9 @@ function startGame() {
              if(guessesRemaining == 0) {
                 alert("You don't have any more remaining guesses left!");
             }
+
+        }
+
+    }
+
+    startGame();
