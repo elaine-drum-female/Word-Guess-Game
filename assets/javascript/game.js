@@ -88,7 +88,9 @@ function startGame() {
 
     // Searching for duplicates
 
-    
+    var count = 0;
+    var found = false;
+
 
     function LoseGame() {
         incorrectLetters.push(chosenLetter);
