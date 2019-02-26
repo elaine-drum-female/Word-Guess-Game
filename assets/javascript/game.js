@@ -187,6 +187,61 @@ var wordGuessGame = {
         this.wordGuessView();
     },
 
+    // check to see if the user has won
+
+    updateHasWon: function () {
+        var wins;
+
+        // If user has not guessed correctly a letter in the word, set win to false
+        if (this.matchedLetters.length === 0) {
+            wins = false;
+        } else {
+            wins = true;
+        }
+
+        //Cycle through the secretWordLetter array and check whether a letter appears in the array. If it does not match/exist in the matchedLetters array, set the win to false
+
+        for (var i = 0; i < this.secretWordLetters.length; i++) {
+            if (this.matchedLetters.indexOf(this.secretWordLetters[i]) === -1) {
+                wins = false;
+            }
+        }
+
+        // if win is true...
+        if (wins) {
+            // increment wins
+
+            this.wins = this.wins + 1;
+
+            //Update wins on page
+
+            document.querySelector("#wins").innerHTML = this.wins;
+
+            //Update the song title and the band on the page of the chosen word object
+
+            document.querySelector("#music").innerHTML = this.chosenWord[this.wordPlay].song + " By " + this.wordPlay;
+
+            // Update the image of the band
+
+            document.querySelector("#band-div").innerHTML = "<img class='band-image' src='../images/" +
+                this.chosenWord[this.wordPlay].picture + " ' alt=' " + this.chosenWord[this.wordPlay].song + "'>";
+
+            // Play audio track of the band
+
+            var audio = new Audio(this.chosenWord[this.wordPlay].preview);
+            audio.play();
+
+            // Return true, which triggers the restart of the game in the updateGame
+
+            return true;
+        }
+
+        // If win is false, return false and the game goes on:
+        return false;
+    }
+
+};
+
 
 
 
