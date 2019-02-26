@@ -226,7 +226,7 @@ var wordGuessGame = {
 
             // Update the image of the band
 
-            document.querySelector("#band-div").innerHTML = "<img class='band-image' src='/" +
+            document.querySelector("#band-div").innerHTML = "<img class='band-image' src='../images/" +
                 this.chosenWord[this.wordPlay].picture + " ' alt=' " + this.chosenWord[this.wordPlay].song + "'>";
 
             // Play audio track of the band
