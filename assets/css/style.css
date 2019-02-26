@@ -100,3 +100,12 @@
     }
   
   }
+
+
+  
+@media (min-width:992px) {
+    #band-div {
+      margin-top: 0;
+    }
+  
+  }
