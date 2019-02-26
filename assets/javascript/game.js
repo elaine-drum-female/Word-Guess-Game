@@ -147,6 +147,30 @@ var wordGuessGame = {
         }
     },
 
+    wordGuessView: function () {
+        // start our page off with empty wordguessview
+        var wordguessView = "";
+
+        // loop through the letters that are being guessed
+        for (var i = 0; i < this.secretWordLetters.length; i++) {
+
+            // check to see if the current letter(s) exist and has been guessed in said array 
+            if (this.matchedLetters.indexOf(this.secretWordLetters[i]) !== -1) {
+                //update wordguessview with that letter
+                wordguessView += this.secretWordLetters[i];
+            }
+            // if it has not been guessed, display a "_" instead
+            else {
+                wordguessView += "&nbsp;_&nbsp;";
+            }
+        }
+
+        // update the page with new string
+
+        document.querySelector("#current-word").innerHTML = wordguessView;
+
+    },
+
 
 
 
