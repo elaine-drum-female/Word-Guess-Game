@@ -72,6 +72,12 @@ h1 {
     padding-top: 10px;
 }
 
+#game-section p:after {
+    content: "(Only compatible via Desktop)";
+    display:block;
+    margin-top:10px;
+}
+
 
 
 @media (min-width:768px) {
@@ -106,6 +112,11 @@ h1 {
 @media (min-width:992px) {
     #band-div {
         margin-top: 0;
+    }
+
+    #game-section p:after {
+        content: "";
+        display:none;
     }
 
 }
