@@ -1,3 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
 @import url("http://fonts.googleapis.com/css?family=Mr+Dafoe");
 @import url("http://fonts.googleapis.com/css?family=Permanent+Marker");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Permanent Marker", cursive;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 100px;
+    margin-bottom: 70px;
+    text-align: center;
+    color: black;
+  }
