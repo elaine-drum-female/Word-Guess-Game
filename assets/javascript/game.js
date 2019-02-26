@@ -95,6 +95,29 @@ var wordGuessGame = {
 
     },
 
+    // This function method happens when user makes an incorrect guess (that has not been guessed before).
+
+    updateletterGuesses: function (letter) {
+
+        // If letter is not in the guessedLetters array, AND the letter is not in the secretWordLetters away.
+        if ((this.guessedLetters.indexOf(letter) === -1) && (this.secretWordLetters.indexOf(letter) === -1)) {
+
+            //Add letter to the guessedLetters array.
+            this.guessedLetters.push(letter);
+
+            // Decrease guesses by one.
+
+            this.guessesLeft--;
+
+            // Update the guesses remaining and guessed letter on the page.
+
+            document.querySelector("#guesses-remaining").innerHTML = this.guessesLeft;
+            document.querySelector("#guessed-letters").innerHTML = this.guessedLetters.join(', ');
+
+        }
+
+    },
+
 
 
 
