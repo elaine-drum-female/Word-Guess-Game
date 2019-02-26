@@ -132,6 +132,21 @@ var wordGuessGame = {
 
     },
 
+    // This is what will happen if the user makes successful guess.
+
+    updateSuccessfulGuess: function (letter) {
+
+        // Cycle through the letters of the revealing from the secret word
+        for (var i = 0; i < this.secretWordLetters.length; i++) {
+
+            //If the guessed letter is in the revealing and exists in the matched letters array but has not been guessed already...
+            if ((letter === this.secretWordLetters[i]) && (this.matchedLetters.indexOf(letter) === -1)) {
+                // Push the new guessed letter into the matched array.
+                this.matchedLetters.push(letter);
+            }
+        }
+    },
+
 
 
 
