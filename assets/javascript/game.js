@@ -66,6 +66,35 @@ var wordGuessGame = {
         this.updateTotalGuesses();
     },
 
+    // this function is run whenever the user guesses a letter
+
+    updateGame: function (letter) {
+
+        //Check to see if the user has no more guesses left, then restart game
+        if (this.guessesLeft === 0) {
+            this.restartGame();
+
+        } else {
+            //Check and update incorrect guesses
+            this.updateletterGuesses(letter);
+
+            // Check and update correct guesses
+
+            this.updateSuccessfulGuess(letter);
+
+            // Rebuild the view of the word
+
+            this.wordGuessView();
+
+            // If the user wins, restart game
+
+            if (this.updateHasWon() === true) {
+                this.restartGame();
+            }
+        }
+
+    },
+
 
 
 
