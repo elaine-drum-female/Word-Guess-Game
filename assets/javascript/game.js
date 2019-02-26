@@ -242,14 +242,19 @@ var wordGuessGame = {
 
 };
 
+// Initialize the game when the page loads
 
+wordGuessGame.setupGame();
 
+// When a key is pressed.
 
+document.onkeyup = function (event) {
+    // Capture pressed key, make lowercase.
+    wordGuessGame.letterGuessed = String.fromCharCode(event.which).toLowerCase();
+    // Pass the guessed letter value into our updateGame function
 
-
-
-
-
+    wordGuessGame.updateGame(wordGuessGame.letterGuessed);
 
 
 };
+
