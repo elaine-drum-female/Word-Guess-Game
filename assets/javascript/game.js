@@ -118,6 +118,20 @@ var wordGuessGame = {
 
     },
 
+    // This function sets initial guesses the user gets.
+    updateTotalGuesses: function () {
+
+        // The user will get more guesses the longer the word is.
+
+        this.totalGuesses = this.secretWordLetters.length + 5;
+        this.guessesLeft = this.totalGuesses;
+
+        // Render the guesses left on the page
+
+        document.querySelector("#guesses-remaining").innerHTML = this.guessesLeft;
+
+    },
+
 
 
 
