@@ -7,25 +7,25 @@
     padding: 0;
     margin: 0;
     font-family: "Permanent Marker", cursive;
-  }
-  
-  img {
+}
+
+img {
     width: 100%;
-  }
-  
-  h1 {
+}
+
+h1 {
     font-family: 'Major Mono Display', monospace;
     font-size: 100px;
     margin-bottom: 70px;
     text-align: center;
     color: black;
-  }
+}
 
-  #band-div {
+#band-div {
     margin-top: 20px;
-  }
-  
-  .dreams {
+}
+
+.dreams {
     z-index: 20;
     margin: 0;
     font-family: "Mr Dafoe", cursive;
@@ -33,9 +33,9 @@
     color: black;
     filter: drop-shadow(2px 2px 2px #0b0a0a);
     text-align: center;
-  }
-  
-  #game-section {
+}
+
+#game-section {
     width: 100%;
     display: block;
     padding: 0;
@@ -45,31 +45,31 @@
     border: 7px dotted #f5f5f5;
     box-shadow: inset 0 -3px 0 0 #f5f5f5, 0 3px 0 0 #f5f5f5;
     font-size: 1.3em;
-  }
+}
 
-  #game-section p,
+#game-section p,
 .section-game-title {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 #current-word,
 #guesses-remaining,
 #wins {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 
 .display-4 {
-  font-size: 4em;
-  margin-bottom: 10px;
+    font-size: 4em;
+    margin-bottom: 10px;
 }
 
 #band-div {
-  padding: 0;
+    padding: 0;
 }
 
 #game-section p {
-  padding-top: 10px;
+    padding-top: 10px;
 }
 
 
@@ -77,35 +77,35 @@
 @media (min-width:768px) {
 
     #game-section {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      width: 100%;
-      margin: 0 auto;
-      padding: 0;
-      margin-bottom: 50px;
-      border: 7px dotted #f5f5f5;
-      box-shadow: inset 0 -3px 0 0 #f5f5f5, 0 3px 0 0 #f5f5f5;
-      font-size: 1.3em;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        margin-bottom: 50px;
+        border: 7px dotted #f5f5f5;
+        box-shadow: inset 0 -3px 0 0 #f5f5f5, 0 3px 0 0 #f5f5f5;
+        font-size: 1.3em;
     }
-  
-  
+
+
     .dreams {
-      position: absolute;
-      display: table-cell;
-      vertical-align: middle;
-      width: 100%;
-      text-align: center;
-      left: 0%;
+        position: absolute;
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        text-align: center;
+        left: 0%;
     }
-  
-  }
+
+}
 
 
-  
+
 @media (min-width:992px) {
     #band-div {
-      margin-top: 0;
+        margin-top: 0;
     }
-  
-  }
+
+}
