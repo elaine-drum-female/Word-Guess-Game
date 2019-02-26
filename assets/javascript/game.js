@@ -171,6 +171,22 @@ var wordGuessGame = {
 
     },
 
+     // function METHOD that restarts game
+
+     restartGame: function () {
+        document.querySelector("#guessed-letters").innerHTML = "";
+
+        this.wordPlay = null;
+        this.secretWordLetters = [];
+        this.matchedLetters = [];
+        this.guessedLetters = [];
+        this.guessesLeft = 0;
+        this.totalGuesses = 0;
+        this.letterGuessed = null;
+        this.setupGame();
+        this.wordGuessView();
+    },
+
 
 
 
