@@ -27,4 +27,22 @@ var wordGuessGame = {
         }
 
     },
+
+    // Variables that will be used in the game.
+
+    // Pick out the word chosen at play in random fashion
+    wordPlay: null,
+    // Need to store the secret word's letters in an array
+    secretWordLetters: [],
+    //Separate the matched letters from the guessed letters
+    matchedLetters: [],
+    guessedLetters: [],
+    // Decrease / increase number of guesses left
+    guessesLeft: 0,
+    // Include total number of guesses
+    totalGuesses: 0,
+    // Decide on the letter guessed based on keypress
+    letterGuessed: null,
+    // Wins or loses
+    wins: 0,
 };
