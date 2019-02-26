@@ -45,4 +45,35 @@ var wordGuessGame = {
     letterGuessed: null,
     // Wins or loses
     wins: 0,
+
+    // SetUp game METHOD when the page first loads
+
+    //create a setupGame method function
+    setupGame: function () {
+        // create a variable to store a word from the object
+        var objKeys = Object.keys(this.chosenWord);
+
+        // take this word and reference the object's word to use with the Math.floor(Math.random()) method
+        this.wordPlay = objKeys[Math.floor(Math.random() * objKeys.length)];
+
+        // split the chosen word into individual letters and store as our secret word
+        this.secretWordLetters = this.wordPlay.split('');
+
+        // Start the game off with ("_ _ _ _").
+        this.wordGuessView();
+
+        // This function renders number of guesses the user gets and displays to the HTML
+        this.updateTotalGuesses();
+    },
+
+
+
+
+
+
+
+
+
+
+
 };
