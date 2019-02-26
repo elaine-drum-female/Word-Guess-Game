@@ -73,7 +73,7 @@ h1 {
 }
 
 #game-section p:after {
-    content: "(Non-touch...best viewed on Desktop)";
+    content: "-Non-touch...best viewed on Desktop";
     display:block;
     margin-top:10px;
 }
